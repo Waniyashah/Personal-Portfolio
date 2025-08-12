@@ -32,11 +32,14 @@ export default function Home() {
             className="text-3xl sm:text-4xl lg:text-5xl font-bold"
             data-aos="fade-right"
           >
-           HELLO I&apos;M WANIYA SHAH AND I AM A{" "}
-            <span className="text-teal-400">FRONTEND DEVELOPER</span>
+            Hello, I’m Waniya Shah {" "}
+            <span className="text-teal-400">
+              Tech Learner, Developer &amp; AI Explorer
+            </span>
           </h1>
+
           <p className="text-gray-400 text-sm sm:text-base md:text-lg">
-            I create beautiful and functional interfaces that users love.
+            Blending design, security, and AI to craft impactful solutions.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
             <Link
@@ -45,27 +48,7 @@ export default function Home() {
             >
               Hire Me
             </Link>
-            <a
-              href="/images/cv.png"
-              download
-              className="flex items-center bg-gray-800 border border-gray-600 px-6 py-3 rounded-md hover:bg-gray-700 w-full sm:w-auto text-center"
-            >
-              Download CV
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="w-5 h-5 ml-2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 16l6-6m0 0l6 6m-6-6v12"
-                />
-              </svg>
-            </a>
+       
           </div>
         </div>
 

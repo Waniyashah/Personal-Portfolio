@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect } from "react";
-import "aos/dist/aos.css"; 
+import "aos/dist/aos.css";
 import AOS from "aos";
-
 
 export default function About() {
   useEffect(() => {
@@ -15,7 +14,6 @@ export default function About() {
   }, []);
 
   return (
-   
     <div className="bg-gray-900 text-white px-6 sm:px-10 py-10 flex items-center justify-center min-h-screen">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Text Section */}
@@ -48,11 +46,13 @@ export default function About() {
           >
             My name is Waniya Shah, and I transitioned from being a medical
             student to pursuing my passion for computer science. I am currently
-            enrolled in a course at GIAIC and plan to take admission in BS
-            Artificial Intelligence (BSAI). With a strong determination to
-            learn, I’ve been working on various web development projects to
-            enhance my skills. I am committed to embracing challenges, exploring
-            innovative ideas, and building a successful career in technology.
+            pursuing a BS in Cyber Security at SMIU and working as a Sales
+            Representative at 408 Solutions. Alongside my degree, I am enrolled
+            in a specialized course at GIAIC focused on Agentic AI and Robotic
+            Engineering. With strong determination to learn, I actively work on
+            projects, explore innovative ideas, and embrace challenges to grow
+            both technically and professionally. My goal is to build a
+            successful career in the ever-evolving field of technology.
           </p>
         </div>
 
@@ -85,6 +85,5 @@ export default function About() {
         </div>
       </div>
     </div>
-
   );
 }

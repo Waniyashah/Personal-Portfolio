@@ -17,7 +17,7 @@ export default function Navbar({ children }: NavbarProps) {
 
   return (
     <>
-      <nav className="bg-gray-900 text-white px-6 py-4 flex justify-between items-center">
+      <nav className="bg-gray-900 text-white px-6 py-4 flex justify-between items-center font-semibold">
         <div className="text-xl font-bold">Waniya Shah</div>
         <div className="hidden md:flex space-x-6">
           <Link href="/" className="hover:text-gray-300">
