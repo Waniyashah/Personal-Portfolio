@@ -1,9 +1,7 @@
 "use client";
-import Image from "next/image";
 import React, { useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import Link from "next/link";
 import { FaNodeJs, FaHtml5, FaCss3Alt, FaPython } from "react-icons/fa";
 import { SiTypescript, SiOpenai, SiNextdotjs } from "react-icons/si";
 import { GrShieldSecurity } from "react-icons/gr";
