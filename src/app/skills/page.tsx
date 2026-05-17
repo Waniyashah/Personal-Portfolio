@@ -27,12 +27,20 @@ export default function Skills() {
     AOS.init({ duration: 1200 });
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize(); // Check initially
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="bg-transparent text-white px-6 md:px-12 py-20 min-h-screen overflow-hidden flex items-center relative">
       <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between">
         
         {/* Left Side: Heading & Text */}
-        <div className="flex-1 w-full flex flex-col items-center md:items-start text-center md:text-left z-20 mb-16 md:mb-0 md:pr-10">
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left z-20 mb-12 md:mb-0 md:pr-10 shrink-0">
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -59,7 +67,7 @@ export default function Skills() {
 
         {/* Right Side: Cloud Orbit */}
         <motion.div 
-          className="flex-1 w-full relative h-[450px] sm:h-[500px] md:h-[600px] flex items-center justify-center z-10"
+          className="w-full md:w-1/2 relative min-h-[450px] sm:min-h-[500px] md:min-h-[600px] flex items-center justify-center z-10 shrink-0"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -97,7 +105,6 @@ export default function Skills() {
             const angle = (index / skills.length) * (2 * Math.PI);
             
             // Adjust radius for right side fit
-            const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
             const radiusX = isMobile ? 120 : 210; 
             const radiusY = isMobile ? 160 : 230;
             
