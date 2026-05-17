@@ -14,7 +14,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="bg-gray-900 text-white px-6 sm:px-10 py-10 flex items-center justify-center min-h-screen">
+    <div className="bg-transparent text-white px-6 sm:px-10 py-20 flex items-center justify-center min-h-screen relative overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Text Section */}
         <div className="relative">
@@ -35,15 +35,17 @@ export default function About() {
             height={88}
           />
           <h1
-            className="text-3xl sm:text-4xl font-bold mb-4"
+            className="text-4xl sm:text-5xl font-bold mb-6"
             data-aos="fade-right"
           >
-            About <span className="text-teal-400">me</span>
+            About <span className="text-gradient">me</span>
           </h1>
-          <p
-            className="text-gray-300 mb-6 leading-relaxed font-light text-sm sm:text-base lg:text-lg"
+          <div
+            className="glass-card p-6 sm:p-8 rounded-2xl"
             data-aos="fade-right"
+            data-aos-delay="200"
           >
+            <p className="text-gray-300 leading-relaxed font-light text-sm sm:text-base lg:text-lg">
             My name is Waniya Shah, and I transitioned from being a medical
             student to pursuing my passion for computer science. I am currently
             pursuing a BS in Cyber Security at SMIU and working as a Sales
@@ -53,25 +55,15 @@ export default function About() {
             projects, explore innovative ideas, and embrace challenges to grow
             both technically and professionally. My goal is to build a
             successful career in the ever-evolving field of technology.
-          </p>
+            </p>
+          </div>
         </div>
 
         {/* Illustration Section */}
         <div className="flex justify-center">
           <div className="relative w-full h-auto max-w-xs sm:max-w-sm lg:max-w-md">
-            {/* Front Illustration */}
-            <div className="absolute top-0 left-0 z-10 animate-pulse">
-              <Image
-                src="/images/pic4.png"
-                alt="Creative UI Designer"
-                priority
-                className="w-full h-auto"
-                width={400}
-                height={472.65}
-              />
-            </div>
             {/* Background Illustration */}
-            <div className="relative z-0">
+            <div className="relative z-0 animate-[float_7s_ease-in-out_infinite]">
               <Image
                 src="/images/pic5.png"
                 alt="Background Illustration"

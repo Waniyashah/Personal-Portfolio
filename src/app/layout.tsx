@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Preloader from "./components/Preloader";
+import CustomCursor from "./components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,13 +28,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <CustomCursor />
+        <Preloader/>
         <Navbar/>
         {children}
-        <Footer/>
+        <Analytics />
+        <div className="snap-start snap-always w-full">
+          <Footer/>
+        </div>
       </body>
     </html>
   );

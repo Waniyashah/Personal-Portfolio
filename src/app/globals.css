@@ -3,19 +3,70 @@
 @tailwind utilities;
 
 :root {
-  --background: #0e1827;
-  --foreground: #171717;
+  --background: #050505;
+  --foreground: #e5e7eb;
+  --primary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    #181024 0deg,
+    #5E40DA 180deg,
+    transparent 360deg
+  );
+  --secondary-glow: radial-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
+    --foreground: #ffffff;
   }
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(94, 64, 218, 0.15), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(45, 212, 191, 0.15), transparent 25%);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+  }
+  .glass-card-hover {
+    @apply hover:bg-white/10 hover:border-teal-400/50 hover:shadow-[0_0_20px_rgba(45,212,191,0.3)] transition-all duration-500 ease-out;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-indigo-400 to-purple-500;
+  }
+  .bg-gradient-primary {
+    @apply bg-gradient-to-r from-teal-500 to-indigo-600;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 15px rgba(45,212,191,0.4)); }
+  50% { opacity: 0.8; transform: scale(1.02); filter: drop-shadow(0 0 30px rgba(45,212,191,0.8)); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide default cursor to use CustomCursor component */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
 }

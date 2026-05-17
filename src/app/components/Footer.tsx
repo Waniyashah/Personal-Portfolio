@@ -7,8 +7,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-400 py-8 px-6">
-      <div className="border-t border-gray-700 w-full my-6"></div>
+    <footer className="glass-card !border-x-0 !border-b-0 !rounded-none text-gray-400 py-10 px-6 mt-12 bg-black/40 backdrop-blur-xl w-full">
 
       <div className="flex flex-col md:flex-row items-center justify-between">
         {/* Navigation Links */}

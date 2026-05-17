@@ -8,14 +8,13 @@ import Contactus from "./contact/page";
 
 const Page = () => {
   return (
-    <div>
-     <Home/>
-      <About/>
-      <Projects/>
-      <Skills/>
-      <Contactus/>
-
-    </div>
+    <main className="w-full">
+      <div className="snap-start snap-always min-h-screen"><Home/></div>
+      <div className="snap-start snap-always min-h-screen"><About/></div>
+      <div className="snap-start snap-always min-h-screen"><Projects/></div>
+      <div className="snap-start snap-always min-h-screen"><Skills/></div>
+      <div className="snap-start snap-always min-h-screen"><Contactus/></div>
+    </main>
   );
 };
 

@@ -14,25 +14,25 @@ export default function Contactus() {
   }, []);
 
   return (
-    <div className="bg-gray-900 text-white px-6 py-16 flex flex-col space-y-12 md:space-y-0 md:flex-row items-center justify-between">
+    <div className="bg-transparent text-white px-6 py-20 flex flex-col space-y-12 md:space-y-0 md:flex-row items-center justify-between min-h-screen">
       {/* Left Section */}
       <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 ">
-          Got a project in <span className="text-teal-400">Mind?</span>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 " data-aos="fade-right">
+          Got a project in <span className="text-gradient">Mind?</span>
         </h2>
-        <div className="relative w-48 sm:w-60 md:w-64 lg:w-72 animate-pulse">
+        <div className="relative w-48 sm:w-60 md:w-64 lg:w-72 animate-[float_6s_ease-in-out_infinite]" data-aos="fade-right" data-aos-delay="200">
           <Image
             src="/images/pic9.png"
             alt="Project Illustration"
             width={255}
             height={348}
-            className="w-full h-auto"
+            className="w-full h-auto mix-blend-screen"
           />
         </div>
       </div>
 
       {/* Right Section */}
-      <div className="md:w-1/2 bg-gray-800 p-6 rounded-lg shadow-lg w-full">
+      <div className="md:w-1/2 glass-card p-8 rounded-2xl w-full" data-aos="fade-left">
         <form
           action="https://formspree.io/f/xvgqdgqe"
           method="POST"
@@ -54,7 +54,7 @@ export default function Contactus() {
                 placeholder="Name"
                 required
                 autoComplete="name"
-                className="w-full p-3 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-teal-400"
+                className="w-full p-4 rounded-lg bg-white/5 text-white border border-white/10 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all duration-300"
               />
             </div>
             <div>
@@ -68,7 +68,7 @@ export default function Contactus() {
                 placeholder="Email"
                 required
                 autoComplete="email"
-                className="w-full p-3 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-teal-400"
+                className="w-full p-4 rounded-lg bg-white/5 text-white border border-white/10 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all duration-300"
               />
             </div>
           </div>
@@ -84,14 +84,14 @@ export default function Contactus() {
               placeholder="Message"
               rows={5}
               required
-              className="w-full p-3 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-teal-400"
+              className="w-full p-4 rounded-lg bg-white/5 text-white border border-white/10 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all duration-300"
             ></textarea>
           </div>
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-teal-400 text-gray-900 p-3 rounded-lg font-semibold hover:bg-teal-500 transition-colors flex items-center justify-center"
+            className="w-full bg-gradient-primary text-white p-4 rounded-xl font-bold hover:shadow-[0_0_20px_rgba(45,212,191,0.5)] transition-all duration-300 flex items-center justify-center translate-y-0 hover:-translate-y-1"
           >
             Send Message
             <span className="ml-2">✈️</span>
